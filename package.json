@@ -1,0 +1,22 @@
+{
+  "name": "iproyecto_disennoweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pamelamurilloa/IProyecto_DisennoWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pamelamurilloa/IProyecto_DisennoWeb/issues"
+  },
+  "homepage": "https://github.com/pamelamurilloa/IProyecto_DisennoWeb#readme",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
