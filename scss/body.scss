@@ -1,0 +1,35 @@
+@import './themes.scss';
+
+body {
+    background-color: var(--color-sass--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero-component {
+    font-stretch: expanded;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0px 30px 0;
+    background-color: var(--color-sass--primary);
+}
+
+.main-content {
+    min-height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#about-us-zone { 
+    height: max-content;
+}
+
+#about-us-zone p { 
+    color: var(--color-sass--specific);
+}

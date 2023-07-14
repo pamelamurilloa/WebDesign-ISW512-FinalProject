@@ -1,0 +1,23 @@
+:root {
+  --color-sass--primary: #394743;
+  --color-sass--secondary: #3E5B45;
+  --color-sass--terciary: #EDEAD0;
+  --color-sass--quaternary: #ffcf56;
+  --color-sass--background: #FAFAFA;
+  --color-sass--general: #FAFAFA;
+  --color-sass--specific: #161616; }
+
+footer {
+  background-color: var(--color-sass--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+.footer-content {
+  text-align: center; }
