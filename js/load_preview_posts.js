@@ -4,7 +4,6 @@ const container = document.getElementById("index-post-container");
 for (let category of categories) {
     var categoryElement = document.createElement("h2");
     categoryElement.innerHTML = category.name;
-
     var postContainer = document.createElement("div");
     container.appendChild(categoryElement);
 
@@ -12,9 +11,9 @@ for (let category of categories) {
 
         var miniPost = document.createElement("div");
         miniPost.innerHTML = `
-            <img class="post-image" alt="post-image" src="${post.img_source}"></img>
+            <img class="post-image" alt="post-image" src="${post.imgSource}"></img>
             <div class="post-title-zone">
-                <h3>${post.title}</h3>
+                <h3><a href="/html/post_page.html?id=${post.id}">${post.title}</a></h3>
                 <div class="post-tile-zone-subinformation">
                     <h4>${post.author}</h4>
                     <h4>${post.date}</h4>

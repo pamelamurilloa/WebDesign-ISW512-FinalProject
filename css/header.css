@@ -1,11 +1,11 @@
 :root {
-  --color-sass--primary: #394743;
-  --color-sass--secondary: #3E5B45;
+  --color-sass--primary: #339d05;
+  --color-sass--secondary: #09d16d;
   --color-sass--terciary: #EDEAD0;
-  --color-sass--quaternary: #ffcf56;
-  --color-sass--background: #FAFAFA;
-  --color-sass--general: #FAFAFA;
-  --color-sass--specific: #161616; }
+  --color-sass--quaternary: #c2b2d9;
+  --color-sass--background: #d4ebef;
+  --color-sass--general: #d4ebef;
+  --color-sass--specific: #2a2e2a; }
 
 header {
   background-color: var(--color-sass--secondary);
