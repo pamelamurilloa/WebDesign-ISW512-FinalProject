@@ -1,11 +1,11 @@
 :root {
-  --color-sass--primary: #339d05;
-  --color-sass--secondary: #09d16d;
-  --color-sass--terciary: #EDEAD0;
-  --color-sass--quaternary: #c2b2d9;
-  --color-sass--background: #d4ebef;
-  --color-sass--general: #d4ebef;
-  --color-sass--specific: #2a2e2a; }
+  --color-sass--primary: #061a40;
+  --color-sass--secondary: #006daa;
+  --color-sass--terciary: #e4f3ef;
+  --color-sass--quaternary: #e0c890;
+  --color-sass--background: #FAFAFA;
+  --color-sass--general: #FAFAFA;
+  --color-sass--specific: #161616; }
 
 footer {
   background-color: var(--color-sass--secondary);

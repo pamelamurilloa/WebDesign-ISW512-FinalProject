@@ -20,7 +20,7 @@ const postSpace = document.getElementsByClassName("main-content")[0];
 const heroComponent = document.getElementsByClassName("hero-component")[0];
 const postTitle = document.getElementsByClassName("tile-hero-component")[0];
 
-heroComponent.style.backgroundImage = postInformation.imgSource;
+heroComponent.style.backgroundImage = "url("+postInformation.imgSource+")";
 postTitle.innerHTML = postInformation.title;
 
 let postContent = document.createElement("div");

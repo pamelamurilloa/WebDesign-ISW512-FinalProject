@@ -1,4 +1,4 @@
-const container = document.getElementById("index-post-container");
+const container = document.getElementsByClassName("all-posts-section")[0];
 
 
 for (let category of categories) {
