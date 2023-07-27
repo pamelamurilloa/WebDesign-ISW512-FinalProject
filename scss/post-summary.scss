@@ -30,7 +30,7 @@
 }
 
 .post-image {
-    opacity: 70%;
+    opacity: 90%;
     align-self: center;
     border-radius: inherit;
     max-width: 100%;
@@ -76,7 +76,7 @@
 .rating-distribution { 
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     
 }
@@ -85,6 +85,15 @@
     padding: 3%;
     width: 18%;
     height: auto;
+}
+
+.rating:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+.rating:hover ~ .rating{
+    filter: brightness(1.5);
 }
 
 
