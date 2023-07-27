@@ -26,13 +26,29 @@ body {
   text-shadow: 1cap; }
 
 .main-content {
-  min-height: 75%;
+  margin-bottom: 28%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; }
 
 #about-us-zone {
-  height: max-content; }
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  font-size: 1.3rem;
+  padding: 3%;
+  margin: 2%; }
+
+#about-us-zone div:first-child {
+  display: flex;
+  background-color: var(--color-sass--quaternary);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%; }
+
+#about-us-zone div {
+  padding: 1%; }
 
 #about-us-zone p, .post-subinformation h4, .post-content-zone {
   color: var(--color-sass--specific); }
@@ -41,6 +57,22 @@ body {
   font-size: 1.3rem;
   padding: 3%; }
 
+#author-photo {
+  object-fit: contain;
+  width: 80%;
+  height: auto;
+  margin: 2%;
+  border-radius: 10%; }
+
 @media screen and (min-width: 768px) {
   .post-subinformation, .post-content-zone {
     padding: 20px; } }
+
+@media screen and (min-width: 1024px) {
+  #about-us-zone div:first-child {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around; }
+  #author-photo {
+    width: 40%;
+    height: auto; } }
