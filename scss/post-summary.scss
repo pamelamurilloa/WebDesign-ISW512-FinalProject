@@ -1,6 +1,10 @@
 @import './themes.scss';
 @import './variables/breakpoints.scss';
 
+.post-content { 
+    margin-bottom: 260px;
+}
+
 .post-container {
     background-color: var(--color-sass--terciary);
     margin: 10px 0px 10px 0px;
@@ -12,12 +16,6 @@
     align-items: stretch;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-
-}
-
-.post, .post-title-zone {
-    border-radius: 15px;
-    max-width: 350px;
 }
 
 .post {
@@ -26,7 +24,16 @@
     background-color: var(--color-sass--secondary);
     margin: 10px 30px 10px 30px;
     padding: 1%;
+    max-width: 400px;
     width: 80%;
+    border-radius: 15px;
+
+    transition-duration: 1s;
+}
+
+.post:hover {
+    transform: scale(1.1);
+    transition-duration: 1s;
 }
 
 .post-image {
@@ -40,14 +47,14 @@
 .post-title-zone {
     display: flex;
     flex-direction: column;
-    color: var(--color-sass--specific);
     background-color: var(--color-sass--quaternary);
-    padding: 1% 2% 1% 2%;
-}
+    padding: 1% 4% 1% 4%;
 
-.post-title-zone h3 {
-    font-size: 1.5rem;
-    margin: 1%;
+    h3 {
+        font-size: 1.5rem;
+        margin: 1%;
+        color: var(--color-sass--specific);
+    }
 }
 
 .post-tile-zone-subinformation {
@@ -55,6 +62,7 @@
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
+    color: var(--color-sass--specific);
 }
 
 .post-title-zone h3, .post-title-zone h4 {
@@ -70,7 +78,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.post-subinformation, .post-content-zone {
+    font-size: 1.3rem;
+    padding: 1.5%;
 }
 
 .rating-distribution { 
@@ -79,6 +92,12 @@
     flex-direction: row-reverse;
     align-items: center;
     
+}
+
+.author-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .rating {
@@ -108,7 +127,6 @@
         justify-content: space-around;
         background-color: var(--color-sass--quaternary);
     }
-
 
     .rating-distribution { 
         width: 30%;

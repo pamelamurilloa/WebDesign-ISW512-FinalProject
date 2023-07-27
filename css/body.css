@@ -17,19 +17,33 @@ body {
 
 .hero-component {
   font-stretch: expanded;
-  min-height: 250px;
+  min-height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 100px 0px 30px 0;
-  background-color: var(--color-sass--primary);
-  text-shadow: 1cap; }
+  background-size: 100%;
+  text-shadow: #000 5px 0 20px;
+  border-bottom: solid black 1.5px;
+  border-top: solid black 1.5px; }
+  .hero-component h1 {
+    font-size: 5rem;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black; }
+
+#hero-index, #hero-about-us, #hero-category {
+  background-image: url("../images/leaves.png");
+  filter: hue-rotate(90deg); }
 
 .main-content {
   margin-bottom: 260px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; }
+  .main-content h2 {
+    color: var(--color-sass--specific); }
+  .main-content h2:nth-child(2) {
+    align-self: center;
+    font-size: 2rem; }
 
 #about-us-zone {
   display: flex;
@@ -54,27 +68,12 @@ body {
 #about-us-zone p, .post-subinformation h4, .post-content-zone {
   color: var(--color-sass--specific); }
 
-.post-subinformation, .post-content-zone {
-  font-size: 1.3rem;
-  padding: 3%; }
-
 #author-photo {
   object-fit: contain;
   width: 60%;
   height: auto;
   margin: 2%;
   border-radius: inherit; }
-
-.links-to-socials-content {
-  margin-right: 25px;
-  width: 50px;
-  height: 150px;
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-
-.social-link {
-  width: 50px; }
 
 @media screen and (min-width: 768px) {
   .post-subinformation, .post-content-zone {

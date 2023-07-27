@@ -1,4 +1,5 @@
 @import './themes.scss';
+@import './variables/breakpoints.scss';
 
 footer {
     background-color: var(--color-sass--secondary);
@@ -20,17 +21,50 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    overflow-y: hidden;
+
+    #author-information {
+        color: var(--color-sass--general);
+    }
+
 }
 
 .links-to-socials-content {
     width: 50px;
-    height: 150px;
+    height: 110px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     .social-link {
-        width: 30px;
+        width: 35px;
+        margin: 3%;
+    }
+
+    .social-link:hover {
+        transform: scale(1.5);
     }
 }
+
+@media screen and (min-width: $medium--desktop) {
+
+    .links-to-socials-content {
+        width: 240px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        .social-link {
+            width: 80px;
+        }
+
+        #facebook {
+            width: 200px;
+        }
+    }
+
+}
+

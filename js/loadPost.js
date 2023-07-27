@@ -26,8 +26,10 @@ postTitle.innerHTML = postInformation.title;
 let postContent = document.createElement('div');
 postContent.innerHTML = `
             <div class="post-subinformation">
-                <h4>Autor: ${postInformation.author}</h4>
-                <h4>Fecha: ${postInformation.date}</h4>
+                <div class="author-date">
+                    <h4>Autor: ${postInformation.author}</h4>
+                    <h4>Fecha: ${postInformation.date}</h4>
+                </div>
                 <div class="rating-distribution">
                     <img class="rating" src="../images/rating.png"></img>
                     <img class="rating" src="../images/rating.png"></img>
@@ -41,5 +43,5 @@ postContent.innerHTML = `
             </div>
         `;
 
-postSpace.className = 'post-conten';
+postSpace.className = 'post-content';
 postSpace.appendChild(postContent);
