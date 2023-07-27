@@ -14,10 +14,25 @@ footer {
   align-items: center;
   justify-content: space-around;
   padding: 3px;
-  height: 200px;
+  height: 230px;
   position: absolute;
   bottom: 0;
   width: 100%; }
 
 .footer-content {
-  text-align: center; }
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; }
+
+.links-to-socials-content {
+  width: 50px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
+  .links-to-socials-content .social-link {
+    width: 30px; }

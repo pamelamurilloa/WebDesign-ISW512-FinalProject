@@ -66,7 +66,7 @@ var geologicalPosts = [
 
 ]
 
-var otherPosts = [
+var animals = [
     {
         id:7,
         imgSource:"../images/mamut.jpeg",
@@ -98,6 +98,6 @@ var categories = [
 
     {
         name:"Animals",
-        posts: otherPosts
+        posts: animals
     }
 ]

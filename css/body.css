@@ -26,7 +26,7 @@ body {
   text-shadow: 1cap; }
 
 .main-content {
-  margin-bottom: 28%;
+  margin-bottom: 260px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; }
@@ -38,6 +38,10 @@ body {
   font-size: 1.3rem;
   padding: 3%;
   margin: 2%; }
+  #about-us-zone div {
+    padding: 1%; }
+  #about-us-zone p {
+    padding: 25px; }
 
 #about-us-zone div:first-child {
   display: flex;
@@ -45,10 +49,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 10%; }
-
-#about-us-zone div {
-  padding: 1%; }
+  border-radius: 5%; }
 
 #about-us-zone p, .post-subinformation h4, .post-content-zone {
   color: var(--color-sass--specific); }
@@ -59,14 +60,27 @@ body {
 
 #author-photo {
   object-fit: contain;
-  width: 80%;
+  width: 60%;
   height: auto;
   margin: 2%;
-  border-radius: 10%; }
+  border-radius: inherit; }
+
+.links-to-socials-content {
+  margin-right: 25px;
+  width: 50px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.social-link {
+  width: 50px; }
 
 @media screen and (min-width: 768px) {
   .post-subinformation, .post-content-zone {
-    padding: 20px; } }
+    padding: 20px; }
+  .main-content {
+    margin-bottom: 28%; } }
 
 @media screen and (min-width: 1024px) {
   #about-us-zone div:first-child {
@@ -74,5 +88,5 @@ body {
     align-items: center;
     justify-content: space-around; }
   #author-photo {
-    width: 40%;
+    width: 30%;
     height: auto; } }
