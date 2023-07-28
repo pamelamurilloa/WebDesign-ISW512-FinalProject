@@ -28,6 +28,7 @@ for (let category of categories) {
 
         postContainer.appendChild(miniPost);
     }
+    
     postContainer.className = "post-container";
     container.appendChild(postContainer);
 }

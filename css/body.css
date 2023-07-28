@@ -17,7 +17,7 @@ body {
 
 .hero-component {
   font-stretch: expanded;
-  min-height: 350px;
+  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,7 +27,8 @@ body {
   border-bottom: solid black 1.5px;
   border-top: solid black 1.5px; }
   .hero-component h1 {
-    font-size: 5rem;
+    text-align: center;
+    font-size: 4rem;
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black; }
 
 #hero-index, #hero-about-us, #hero-category {

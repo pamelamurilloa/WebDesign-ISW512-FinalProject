@@ -1,13 +1,19 @@
 @import './themes.scss';
 @import './variables/breakpoints.scss';
 
+.all-posts-section h2, .top-posts-section h2{
+
+    margin-left: 10px;
+
+}
+
 .post-content { 
     margin-bottom: 260px;
 }
 
 .post-container {
     background-color: var(--color-sass--terciary);
-    margin: 10px 0px 10px 0px;
+    margin: 15px 2px 15px 2px;
     padding: 10px 0px 10px 0px;
     display: grid;
     gap: 3rem;
@@ -16,6 +22,7 @@
     align-items: stretch;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
 }
 
 .post {
@@ -50,7 +57,11 @@
     background-color: var(--color-sass--quaternary);
     padding: 1% 4% 1% 4%;
 
-    h3 {
+    h4 {
+        color: var(--color-sass--specific);
+    }
+
+    a {
         font-size: 1.5rem;
         margin: 1%;
         color: var(--color-sass--specific);
@@ -62,10 +73,6 @@
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
-    color: var(--color-sass--specific);
-}
-
-.post-title-zone h3, .post-title-zone h4 {
     color: var(--color-sass--specific);
 }
 

@@ -7,12 +7,15 @@
   --color-sass--general: #FAFAFA;
   --color-sass--specific: #161616; }
 
+.all-posts-section h2, .top-posts-section h2 {
+  margin-left: 10px; }
+
 .post-content {
   margin-bottom: 260px; }
 
 .post-container {
   background-color: var(--color-sass--terciary);
-  margin: 10px 0px 10px 0px;
+  margin: 15px 2px 15px 2px;
   padding: 10px 0px 10px 0px;
   display: grid;
   gap: 3rem;
@@ -49,7 +52,9 @@
   flex-direction: column;
   background-color: var(--color-sass--quaternary);
   padding: 1% 4% 1% 4%; }
-  .post-title-zone h3 {
+  .post-title-zone h4 {
+    color: var(--color-sass--specific); }
+  .post-title-zone a {
     font-size: 1.5rem;
     margin: 1%;
     color: var(--color-sass--specific); }
@@ -59,9 +64,6 @@
   width: 100%;
   flex-direction: column;
   justify-content: space-between;
-  color: var(--color-sass--specific); }
-
-.post-title-zone h3, .post-title-zone h4 {
   color: var(--color-sass--specific); }
 
 .post-desc-zone {
