@@ -7,6 +7,13 @@
   --color-sass--general: #FAFAFA;
   --color-sass--specific: #161616; }
 
+.dark-blue {
+  --color-sass--primary: #2a5e30;
+  --color-sass--secondary: #528145;
+  --color-sass--terciary: #B1DC88;
+  --color-sass--quaternary: #ffcf56;
+  --color-sass--background: #E8E8E8; }
+
 footer {
   background-color: var(--color-sass--secondary);
   display: flex;

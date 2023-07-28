@@ -12,11 +12,11 @@
     --color-sass--specific : #{$soft-black};
 }
 
-// .dark-blue {
-//     --color-sass--primary : #{$main-color-dark-cold-theme};
-//     --color-sass--secondary : #{$secondary-color-dark-cold-theme};
-//     --color-sass--terciary : #{$terciary-color-dark-cold-theme};
-//     --color-sass--quaternary : #{$quaternary-color-dark-cold-theme};
+.dark-blue {
+    --color-sass--primary : #{$main-color-dark-cold-theme};
+    --color-sass--secondary : #{$secondary-color-dark-cold-theme};
+    --color-sass--terciary : #{$terciary-color-dark-cold-theme};
+    --color-sass--quaternary : #{$quaternary-color-dark-cold-theme};
 
-//     --color-sass--background : #{$main-background-dark-theme};
-// }
+    --color-sass--background : #{$main-background-dark-theme};
+}

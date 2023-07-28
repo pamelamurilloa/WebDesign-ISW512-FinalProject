@@ -1,5 +1,7 @@
 const container = document.getElementsByClassName("top-posts-section")[0];
 
+
+//This for will go through the categories extracting those with more than 4 stars to show in the index zone
 for (let category of categories) {
     var topPosts = category.posts.filter(post => {
         return post.rating > 4;
@@ -33,4 +35,11 @@ for (let category of categories) {
     }
     postContainer.className = "post-container";
     container.appendChild(postContainer);
+}
+
+let bodyTheme = document.getElementById('bodyTheme');
+
+const changeTheme = () => {
+    bodyTheme.className = "dark-blue";
+    console.log("wasa");
 }
