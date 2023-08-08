@@ -26,6 +26,7 @@ for (let category of categories) {
         `
 
         miniPost.className = "post";
+        miniPost.id = post.id;
 
         postContainer.appendChild(miniPost);
     }
