@@ -8,11 +8,13 @@
   --color-sass--specific: #161616; }
 
 .dark-blue {
-  --color-sass--primary: #2a5e30;
-  --color-sass--secondary: #528145;
-  --color-sass--terciary: #B1DC88;
-  --color-sass--quaternary: #ffcf56;
-  --color-sass--background: #E8E8E8; }
+  --color-sass--primary: #062638;
+  --color-sass--secondary: #6bb8cd;
+  --color-sass--terciary: #133649;
+  --color-sass--quaternary: #5a3764;
+  --color-sass--background: #161616;
+  --color-sass--general: #161616;
+  --color-sass--specific: #FAFAFA; }
 
 footer {
   background-color: var(--color-sass--secondary);
@@ -34,8 +36,6 @@ footer {
   align-items: center;
   justify-content: space-around;
   overflow-y: hidden; }
-  .footer-content #author-information {
-    color: var(--color-sass--general); }
 
 .links-to-socials-content {
   width: 50px;

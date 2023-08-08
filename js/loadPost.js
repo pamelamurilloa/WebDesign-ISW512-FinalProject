@@ -1,6 +1,5 @@
 let idPost = new URLSearchParams(location.search);
 idPost = idPost.getAll("id");
-console.log(idPost);
 
 let postInformation = "no info";
 
@@ -11,9 +10,6 @@ for (let category of categories) {
         }
     }
 }
-
-console.log(postInformation.title);
-console.log(postInformation.imgSource);
 
 const postSpace = document.getElementsByClassName('main-content')[0];
 

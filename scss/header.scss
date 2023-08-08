@@ -58,7 +58,7 @@ object {
     right: -100%;
     z-index: 100;
     background-color: var(--color-sass--secondary);
-    transition: width 2s, height 2s, transform 1.5s;
+    transition: width 2s, height 2s, transform 0.5s;
 }
 
 .menu li {padding-left: 40px;}
@@ -87,7 +87,7 @@ object {
 
 .menu li a:hover:after {
     width: 100%;
-    transition: width 0.5s;
+    transition: width 0.6s;
 }
 
 ul a.active {

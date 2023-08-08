@@ -18,15 +18,16 @@ body {
     justify-content: center;
     margin: 100px 0px 30px 0;
     background-size: 100%;
-    text-shadow: #000 5px 0 20px;
-    border-bottom: solid black 1.5px;
-    border-top: solid black 1.5px;
+    text-shadow: var(--color-sass--general) 5px 0 20px;
+    border-bottom: solid var(--color-sass--specific) 1.5px;
+    border-top: solid var(--color-sass--specific) 1.5px;
 
 
     h1 {
+        color: var(--color-sass--specific);
         text-align: center;
         font-size: 4rem;
-        text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+        text-shadow: -3px 0 solid var(--color-sass--general), 0 3px var(--color-sass--general), 3px 0 var(--color-sass--general), 0 -3px var(--color-sass--general);
     }
 }
 
