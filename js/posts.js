@@ -1,7 +1,7 @@
 let geologicalPosts = [
     {
         id: 1,
-        imgSource: 'https://drive.google.com/file/d/1JFxfyhfuj3keBCEC53qiZQw7-wMmPrB4/view?usp=sharing',
+        imgSource: '../images/cambrian.jpeg',
         title: 'Cámbrico',
         author: 'Pamela Murillo',
         date: '2021-10-24',

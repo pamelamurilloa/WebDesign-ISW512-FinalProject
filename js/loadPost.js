@@ -27,11 +27,11 @@ postContent.innerHTML = `
                     <h4>Fecha: ${postInformation.date}</h4>
                 </div>
                 <div class="rating-distribution">
-                    <img class="rating" src="../images/rating.png"></img>
-                    <img class="rating" src="../images/rating.png"></img>
-                    <img class="rating" src="../images/rating.png"></img>
-                    <img class="rating" src="../images/rating.png"></img>
-                    <img class="rating" src="../images/rating.png"></img>
+                    <img id="rating-1" class="rating" src="../images/rating.png"></img>
+                    <img id="rating-2" class="rating" src="../images/rating.png"></img>
+                    <img id="rating-3" class="rating" src="../images/rating.png"></img>
+                    <img id="rating-4" class="rating" src="../images/rating.png"></img>
+                    <img id="rating-5"class="rating" src="../images/rating.png"></img>
                 </div>
             </div>
             <div class="post-content-zone">

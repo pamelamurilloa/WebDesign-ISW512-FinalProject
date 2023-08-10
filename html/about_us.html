@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/all.css" type="text/css">
-    <link rel="stylesheet" href="../css/post-summary.css" type="text/css">
-    <link rel="stylesheet" href="../css/header.css" type="text/css">
-    <link rel="stylesheet" href="../css/body.css" type="text/css">
-    <link rel="stylesheet" href="../css/footer.css" type="text/css">
+        <link rel="stylesheet" href="../css/all.css" type="text/css">
+        <link rel="stylesheet" href="../css/post-summary.css" type="text/css">
+        <link rel="stylesheet" href="../css/header.css" type="text/css">
+        <link rel="stylesheet" href="../css/body.css" type="text/css">
+        <link rel="stylesheet" href="../css/footer.css" type="text/css">
+        <link rel="stylesheet" href="../css/mixins/login.css" type="text/css">
 
-    <title>About Us</title>
-</head>
-<body>
-    <header id="header-container-index" class="sticky">
-        <nav id="main-menu">
-            <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="about_us.html">About Us</a></li>
-                <li><a href="categories.html">Categories</a></li>
-            </ul>
-        </nav>
-        
-        <nav class="nav-container">
-            <ul class="nav-bar">
-                <input type="checkbox" id="check" />
-                <span class="menu">
+        <title>About Us</title>
+    </head>
+    <body>
+        <header id="header-container-index" class="sticky">
+            <nav id="main-menu">
+                <ul class="links">
                     <li><a href="index.html">Home</a></li>
                     <li><a class="active" href="about_us.html">About Us</a></li>
                     <li><a href="categories.html">Categories</a></li>
-                    <label for="check" class="close-menu">&#10005</label>
-                </span>
-                <label for="check" class="open-menu">&#9776</label>
-            </ul>
-        </nav>
-    </header>
+                </ul>
+            </nav>
+            
+            <nav class="nav-container">
+                <ul class="nav-bar">
+                    <input type="checkbox" id="check" />
+                    <span class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="active" href="about_us.html">About Us</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <label for="check" class="close-menu">&#10005</label>
+                    </span>
+                    <label for="check" class="open-menu">&#9776</label>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="main-content">
-        <div class="hero-component" id="hero-about-us">
-            <h1 class="tile-hero-component">About Us</h1>
+        <div class="main-content">
+            <div class="hero-component" id="hero-about-us">
+                <h1 class="tile-hero-component">About Us</h1>
+            </div>
+
+            <div id="about-us-zone">
+                <div>
+                    <img id="author-photo" src="../images/authorPhoto.jpeg">
+                    <p>
+                    ¡Hola! Yo soy Pamela Murillo y soy una estudiante de segundo año en la carrera de ingeniería del software, tengo 19 años y desde siempre he querido tener la oportunidad de aprender a diseñar páginas web con la intención de otorgar pedacitos de mis hobbys al mundo.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Aunque no soy la mejor diseñando espero que la página sea de su agrado y que le interese alguno de los temas que abarca. La paleontología ha sido el hobby principal del que me quiero expresar en mis futuras páginas web y por lo tanto espero que le interesen al menos algo de la información que aquí se muestra. En la página está presente el diseño mobile-first y la utilización de paletas de colores en su mayoría constrastantes con la letra para su mejor lectura. Además, he añadido algo de JS en todo lo referente a los posts en sí y otro poco para alterar las clases de algunas cosas como el header y futuramente las estrellas de cada post.
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div id="about-us-zone">
-            <div>
-                <img id="author-photo" src="../images/authorPhoto.jpeg">
-                <p>
-                ¡Hola! Yo soy Pamela Murillo y soy una estudiante de segundo año en la carrera de ingeniería del software, tengo 19 años y desde siempre he querido tener la oportunidad de aprender a diseñar páginas web con la intención de otorgar pedacitos de mis hobbys al mundo.
-                </p>
-            </div>
-            <div>
-                <p>
-                    Aunque no soy la mejor diseñando espero que la página sea de su agrado y que le interese alguno de los temas que abarca. La paleontología ha sido el hobby principal del que me quiero expresar en mis futuras páginas web y por lo tanto espero que le interesen al menos algo de la información que aquí se muestra. En la página está presente el diseño mobile-first y la utilización de paletas de colores en su mayoría constrastantes con la letra para su mejor lectura. Además, he añadido algo de JS en todo lo referente a los posts en sí y otro poco para alterar las clases de algunas cosas como el header y futuramente las estrellas de cada post.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <footer id="footer-container-index">
-        <object data="footer.html"></object>
-    </footer>
-    
-</body>
+        <footer id="footer-container-index">
+            <object data="footer.html"></object>
+        </footer>
+        
+        <script src="../js/api.js"></script>
+        <script src="../js/databaseManager.js"></script>
+        <script src="../js/closeSession.js"></script>
+    </body>
 </html>

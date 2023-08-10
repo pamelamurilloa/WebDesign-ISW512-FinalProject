@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/all.css" type="text/css">
-    <link rel="stylesheet" href="../css/post-summary.css" type="text/css">
-    <link rel="stylesheet" href="../css/header.css" type="text/css">
-    <link rel="stylesheet" href="../css/body.css" type="text/css">
-    <link rel="stylesheet" href="../css/footer.css" type="text/css">
-    <link rel="stylesheet" href="../css/post-summary.css" type="text/css">
+        <link rel="stylesheet" href="../css/all.css" type="text/css">
+        <link rel="stylesheet" href="../css/post-summary.css" type="text/css">
+        <link rel="stylesheet" href="../css/header.css" type="text/css">
+        <link rel="stylesheet" href="../css/body.css" type="text/css">
+        <link rel="stylesheet" href="../css/footer.css" type="text/css">
+        <link rel="stylesheet" href="../css/post-summary.css" type="text/css">
+        <link rel="stylesheet" href="../css/mixins/login.css" type="text/css">
 
-    <script src="../js/posts.js"></script>
-    <title>Post</title>
-</head>
-<body>
-    <header id="header-container-index" class="sticky">
-        <nav id="main-menu">
-            <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="categories.html">Categories</a></li>
-            </ul>
-        </nav>
-        
-        <nav class="nav-container">
-            <ul class="nav-bar">
-                <input type="checkbox" id="check" />
-                <span class="menu">
+        <script src="../js/posts.js"></script>
+        <title>Post</title>
+    </head>
+    <body>
+        <header id="header-container-index" class="sticky">
+            <div class="options-header-container">
+                <button type="button" id="close-session-button">Log out</button>
+            </div>
+            <nav id="main-menu">
+                <ul class="links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about_us.html">About Us</a></li>
-                    <li><a class="active" href="categories.html">Categories</a></li>
-                    <label for="check" class="close-menu">&#10005</label>
-                </span>
-                <label for="check" class="open-menu">&#9776</label>
-            </ul>
-        </nav>
-    </header>
+                    <li><a href="categories.html">Categories</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="nav-container">
+                <ul class="nav-bar">
+                    <input type="checkbox" id="check" />
+                    <span class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a class="active" href="categories.html">Categories</a></li>
+                        <label for="check" class="close-menu">&#10005</label>
+                    </span>
+                    <label for="check" class="open-menu">&#9776</label>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="main-content">
-        <div class="hero-component">
-            <h1 class="tile-hero-component">Prehistoric Den</h1>
+        <div class="main-content">
+            <div class="hero-component">
+                <h1 class="tile-hero-component">Prehistoric Den</h1>
+            </div>
+            
         </div>
-        
-    </div>
 
-    <footer>
-        <object data="footer.html"></object>
-    </footer>
+        <footer>
+            <object data="footer.html"></object>
+        </footer>
 
-<script src="../js/loadPost.js"></script>
-<script src="../js/headerAtributes.js"></script>
-</body>
+        <script src="../js/api.js"></script>
+        <script src="../js/databaseManager.js"></script>
+        <script src="../js/closeSession.js"></script>
+        <script src="../js/loadPost.js"></script>
+        <script src="../js/ratings.js"></script>
+        <script src="../js/headerAtributes.js"></script>
+    </body>
 </html>

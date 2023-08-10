@@ -8,7 +8,12 @@ const apiRequest = async (endpoint, options) => {
           },
         ...options
     });
-    const data = await response.json();
-    return data
+
+    const result = {status:response.status};
+    if (response.headers.get('Content-Length') > '0') {
+        result.data = await response.json();
+    }
+
+    return result;
 }
 

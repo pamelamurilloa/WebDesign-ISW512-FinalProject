@@ -5,9 +5,7 @@ let keyphrase = '';
 const updateSearchBar = () => {
     keyphrase = document.getElementById("to-search").value;
     container.innerHTML = ""
-    // optionsParent.innerHTML = "";
-    // container.innerHTML = "";
-    // let searchResults = [];
+
 
     for (let category of categories) {
         var categoryElement = document.createElement("h2");

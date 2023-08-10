@@ -9,12 +9,57 @@ const getUser = async (id) => {
     return user;
 }
 
+const getUserId = async (username) => {
+    const user = await apiRequest(`users/search?username=${username}`);
+    return user.id;
+}
+
+const getPostId = async (title) => {
+    const post = await apiRequest(`posts/${title}`);
+    return post.id;
+}
+
+const confirmLogin = async (user) => {
+    const userInfo = await apiRequest(`users/login`, 
+    {
+        method: "POST",
+        body: JSON.stringify(user)
+    })
+
+    return userInfo;
+}
+
 const insertUser = async (user) => {
     const response = await apiRequest(`users/insert-new`, 
     {
         method: "POST",
         body: JSON.stringify(user)
     })
+
+    return response;
+}
+
+const confirmRatingExists = async (ratingInfo) => {
+    const response = await apiRequest('posts/confirm-rating', 
+    {
+        method: "POST",
+        body: JSON.stringify(ratingInfo)
+    })
+
+    console.log(response);
+    return response;
+}
+
+const getTopPostsByCategory = async () => {
+    const categories = await apiRequest('categories')
+    var topPostsByCategory = [];
+    for (let category of categories) {
+        
+        var topPosts = await apiRequest(`posts/top-summary?id=${categories.index(category)}`)
+        topPostsByCategory.pusg({name: category.name, posts:topPosts})
+    }
+
+    return topPostsByCategory;
 }
 
 
