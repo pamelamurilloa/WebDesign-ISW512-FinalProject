@@ -2,10 +2,11 @@ const optionsParent = document.getElementById("dropdown-search-options");
 
 let keyphrase = '';
 
-const updateSearchBar = () => {
+const updateSearchBar = async () => {
     keyphrase = document.getElementById("to-search").value;
-    container.innerHTML = ""
+    container.innerHTML = "";
 
+    const categories = await getPostsByCategory();
 
     for (let category of categories) {
         var categoryElement = document.createElement("h2");
@@ -16,15 +17,10 @@ const updateSearchBar = () => {
         for (let post of category.posts) 
         {
             if (post.title.toLowerCase().includes(keyphrase) || post.summary.toLowerCase().includes(keyphrase) || post.author.toLowerCase().includes(keyphrase)) {
-                // searchResults.push(post);
-
-                // let optionElement = document.createElement("li");
-                // optionElement.innerHTML = `<a href="#${post.id}">${post.title}</a>`;
-                // optionsParent.appendChild(optionElement);
 
                 var miniPost = document.createElement("div");
                 miniPost.innerHTML = `
-                    <img class="post-image" alt="post-image" src="${post.imgSource}"></img>
+                    <img class="post-image" alt="post-image" src="${post.img_source}"></img>
                     <div class="post-title-zone">
                         <h3><a href="/html/post_page.html?id=${post.id}">${post.title}</a></h3>
                         <div class="post-tile-zone-subinformation">

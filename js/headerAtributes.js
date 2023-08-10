@@ -13,9 +13,15 @@ function headerSticker()
 }
 }
 
-let bodyTheme = document.getElementById('bodyTheme');
+const bodyTheme = document.getElementById('bodyTheme');
+const themeButton = document.getElementById('theme-button');
 
 const changeTheme = () => {
+  if (bodyTheme.className === "dark-blue") {
+    bodyTheme.classList.remove("dark-blue");
+    themeButton.innerHTML = "Light Theme";
+  } else {
     bodyTheme.className = "dark-blue";
-    console.log("wasa");
+    themeButton.innerHTML = "Dark Theme";
+  }
 }

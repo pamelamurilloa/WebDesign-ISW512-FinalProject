@@ -66,6 +66,17 @@ const getTopPostsByCategory = async () => {
     return topPostsByCategory;
 }
 
+const getPostsByCategory = async () => {
+    const {data: { categories }} = await apiRequest('categories')
+    const topPostsByCategory = [];
+    for (let category of categories) {   
+        const topPosts = await apiRequest(`posts/all-summary?id=${category.id}`)
+        topPostsByCategory.push({name: category.name, posts:topPosts.data.posts})
+    }
+
+    return topPostsByCategory;
+}
+
 
 //This will insert any post one has in the js files
 // const insertPost = async (post) => {
