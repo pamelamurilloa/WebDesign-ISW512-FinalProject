@@ -13,15 +13,14 @@
         <link rel="stylesheet" href="../css/mixins/searchbar.css" type="text/css">
         <link rel="stylesheet" href="../css/mixins/login.css" type="text/css">
 
-
-        <script src="../js/posts.js"></script>
         <title>Categories</title>
     </head>
 
-    <body>
+    <body class="bodyTheme">
         <header id="header-container-index" class="sticky">
             <div class="options-header-container">
                 <button type="button" id="close-session-button">Log out</button>
+                <button class='theme-button' type="button" onclick="changeTheme()">Light Theme</button>
             </div>
             <nav id="main-menu">
                 <ul class="links">
@@ -52,8 +51,7 @@
             <div class="search-bar-zone">
                 <div class="search-bar">
                     <input id="to-search" type="text" placeholder="Buscar...">
-                    <!-- <ul id="dropdown-search-options">
-                    </ul> -->
+                    <p id="search-not-found__p"></p>
                 </div>
                 <button type="submit" onclick="updateSearchBar()"><p>&#x2315</p></button>
             </div>

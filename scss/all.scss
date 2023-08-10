@@ -1,5 +1,6 @@
 @import './themes.scss';
 @import './variables/colors.scss';
+@import './variables/breakpoints.scss';
 
 * {
     margin: 0px;
@@ -15,15 +16,14 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    transition: 2000ms linear;
+body, footer, header {
+    transition: 700ms linear;
 }
 
-footer {
-    transition: 1500ms linear;
-}
+@media screen and (max-width: 315px) {
+    
+    * {
+        font-size: 0.7rem;
+    }
 
-header { 
-    transition: 1500ms linear;
 }
-

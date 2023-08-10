@@ -60,7 +60,10 @@ const getTopPostsByCategory = async () => {
     const topPostsByCategory = [];
     for (let category of categories) {   
         const topPosts = await apiRequest(`posts/top-summary?id=${category.id}`)
-        topPostsByCategory.push({name: category.name, posts:topPosts.data.posts})
+
+        if (topPosts.data.posts.length > 0) {
+            topPostsByCategory.push({name: category.name, posts:topPosts.data.posts});
+        }   
     }
 
     return topPostsByCategory;
@@ -68,13 +71,16 @@ const getTopPostsByCategory = async () => {
 
 const getPostsByCategory = async () => {
     const {data: { categories }} = await apiRequest('categories')
-    const topPostsByCategory = [];
+    const postsByCategory = [];
     for (let category of categories) {   
-        const topPosts = await apiRequest(`posts/all-summary?id=${category.id}`)
-        topPostsByCategory.push({name: category.name, posts:topPosts.data.posts})
+        const allPosts = await apiRequest(`posts/all-summary?id=${category.id}`)
+
+        if (allPosts.data.posts.length > 0) {
+            postsByCategory.push({name: category.name, posts:allPosts.data.posts});
+        }   
     }
 
-    return topPostsByCategory;
+    return postsByCategory;
 }
 
 

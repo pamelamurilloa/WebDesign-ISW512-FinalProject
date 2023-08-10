@@ -1,4 +1,5 @@
 const optionsParent = document.getElementById("dropdown-search-options");
+const errorMessageHTML = document.getElementById("search-not-found__p");
 
 let keyphrase = '';
 
@@ -9,11 +10,8 @@ const updateSearchBar = async () => {
     const categories = await getPostsByCategory();
 
     for (let category of categories) {
-        var categoryElement = document.createElement("h2");
-        categoryElement.innerHTML = category.name;
+
         var postContainer = document.createElement("div");
-        container.appendChild(categoryElement);
-        
         for (let post of category.posts) 
         {
             if (post.title.toLowerCase().includes(keyphrase) || post.summary.toLowerCase().includes(keyphrase) || post.author.toLowerCase().includes(keyphrase)) {
@@ -40,6 +38,17 @@ const updateSearchBar = async () => {
         }
 
         postContainer.className = "post-container";
-        container.appendChild(postContainer);
+        if (postContainer.children.length > 0) {
+            var categoryElement = document.createElement("h2");
+            categoryElement.innerHTML = category.name;
+            container.appendChild(categoryElement);
+            container.appendChild(postContainer);
+        }
+    }
+
+    if (container.children.length === 0) {
+        errorMessageHTML.innerHTML = "Matches not found";
+    } else {
+        errorMessageHTML.innerHTML = "";
     }
 }

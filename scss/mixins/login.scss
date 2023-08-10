@@ -30,6 +30,7 @@
             label b, input {
                 margin: 3%;
                 color: var(--color-sass--specific);
+                background-color: var(--color-sass--background);
             }
 
         }
@@ -38,7 +39,8 @@
             margin: 1%;
             height: 25px;
             border-radius: 5px;
-            background-color: var(--color-sass--primary);
+            background-color: var(--color-sass--secondary);
+            color: var(--color-sass--specific);
         }
 
     }
@@ -66,22 +68,4 @@
     margin: auto;
     background-color: var(--color-sass--background);
     box-shadow: 0px 0px 800px var(--color-sass--primary);
-}
-
-.options-header-container {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    padding-top: 7px;
-
-    button {
-        height: 40%;
-        width: auto;
-        padding: 5px;
-        border-radius: 5px;
-        color: var(--color-sass--specific);
-        background-color: var(--color-sass--general);
-    }
 }

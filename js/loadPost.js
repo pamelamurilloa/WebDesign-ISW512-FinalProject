@@ -19,14 +19,14 @@ const loadPost = async () => {
                 <div class="post-subinformation">
                     <div class="author-date">
                         <h4>Autor: ${postInformation.author}</h4>
-                        <h4>Fecha: ${postInformation.date}</h4>
+                        <h4>Fecha: ${postInformation.date.slice(0, 10)}</h4>
                     </div>
                     <div class="rating-distribution">
-                        <img id="rating-1" class="rating" src="../images/rating.png" onclick="ratingChanges(1)"></img>
-                        <img id="rating-2" class="rating" src="../images/rating.png" onclick="ratingChanges(2)"></img>
-                        <img id="rating-3" class="rating" src="../images/rating.png" onclick="ratingChanges(3)"></img>
-                        <img id="rating-4" class="rating" src="../images/rating.png" onclick="ratingChanges(5)"></img>
-                        <img id="rating-5" class="rating" src="../images/rating.png" onclick="ratingChanges(5)"></img>
+                        <img id='rating-5' class="rating" src="../images/rating.png" onclick="ratingChanges(5)"></img>
+                        <img id='rating-4' class="rating" src="../images/rating.png" onclick="ratingChanges(4)"></img>
+                        <img id='rating-3' class="rating" src="../images/rating.png" onclick="ratingChanges(3)"></img>
+                        <img id='rating-2' class="rating" src="../images/rating.png" onclick="ratingChanges(2)"></img>
+                        <img id='rating-1' class="rating" src="../images/rating.png" onclick="ratingChanges(1)"></img>
                     </div>
                 </div>
                 <div class="post-content-zone">
@@ -39,4 +39,3 @@ const loadPost = async () => {
 }
 
 loadPost();
-initializeStars();

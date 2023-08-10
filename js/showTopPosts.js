@@ -24,7 +24,7 @@ const showTopPosts = async () => {
                     <h3><a href="/html/post_page.html?id=${post.id}">${post.title}</a></h3>
                     <div class="post-tile-zone-subinformation">
                         <h4>${post.author}</h4>
-                        <h4>${post.date}</h4>
+                        <h4>${post.date.slice(0, 10)}</h4>
                     </div>
                 </div>
                 <div class="post-desc-zone">

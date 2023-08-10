@@ -41,12 +41,14 @@
       padding: inherit; }
       #login-content form .user-authentification-container label b, #login-content form .user-authentification-container input, #login-content form .login-register-button-container label b, #login-content form .login-register-button-container input {
         margin: 3%;
-        color: var(--color-sass--specific); }
+        color: var(--color-sass--specific);
+        background-color: var(--color-sass--background); }
     #login-content form button {
       margin: 1%;
       height: 25px;
       border-radius: 5px;
-      background-color: var(--color-sass--primary); }
+      background-color: var(--color-sass--secondary);
+      color: var(--color-sass--specific); }
 
 #full-screen-container {
   visibility: visible;
@@ -70,18 +72,3 @@
   margin: auto;
   background-color: var(--color-sass--background);
   box-shadow: 0px 0px 800px var(--color-sass--primary); }
-
-.options-header-container {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  padding-top: 7px; }
-  .options-header-container button {
-    height: 40%;
-    width: auto;
-    padding: 5px;
-    border-radius: 5px;
-    color: var(--color-sass--specific);
-    background-color: var(--color-sass--general); }

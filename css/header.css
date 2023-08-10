@@ -39,7 +39,8 @@ object {
 
 #main-menu {
   visibility: hidden;
-  height: 0; }
+  height: 0;
+  width: 100%; }
 
 .nav-container {
   height: 100%; }
@@ -124,6 +125,24 @@ ul a.active {
   right: 0;
   width: 100%; }
 
+.options-header-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding-top: 7px;
+  width: 80%;
+  margin-left: 15px; }
+  .options-header-container button {
+    height: 60%;
+    width: auto;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--color-sass--specific);
+    background-color: var(--color-sass--general);
+    margin: 0px 2% 0px 2%; }
+
 @media screen and (min-width: 1024px) {
   .nav-container {
     visibility: hidden; }
@@ -141,4 +160,6 @@ ul a.active {
     margin: 0 25px 0 25px;
     background-color: rgba(var(--color-sass--primary), 1);
     border-radius: 10%;
-    padding: 10px; } }
+    padding: 10px; }
+  .options-header-container button {
+    font-size: 1.3rem; } }

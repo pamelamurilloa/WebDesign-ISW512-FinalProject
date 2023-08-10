@@ -13,15 +13,26 @@ function headerSticker()
 }
 }
 
-const bodyTheme = document.getElementById('bodyTheme');
-const themeButton = document.getElementById('theme-button');
+const bodyTheme = document.getElementsByClassName('bodyTheme')[0];
+const themeButton = document.getElementsByClassName('theme-button')[0];
 
 const changeTheme = () => {
   if (bodyTheme.className === "dark-blue") {
     bodyTheme.classList.remove("dark-blue");
     themeButton.innerHTML = "Light Theme";
+    localStorage.setItem('theme', 'light');
   } else {
     bodyTheme.className = "dark-blue";
     themeButton.innerHTML = "Dark Theme";
+    localStorage.setItem('theme', 'dark');
+
   }
+}
+
+if (localStorage.getItem('theme') === 'dark') {
+  bodyTheme.style.transition = 'all 0s';
+  bodyTheme.className = "dark-blue";
+  themeButton.innerHTML = "Dark Theme";
+} else {
+  bodyTheme.style.transition = 'all 700ms';
 }
