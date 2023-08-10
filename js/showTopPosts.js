@@ -1,45 +1,44 @@
 const container = document.getElementsByClassName("top-posts-section")[0];
 
 
-//This for will go through the categories extracting those with more than 4 stars to show in the index zone
-for (let category of categories) {
-    var topPosts = category.posts.filter(post => {
-        return post.rating > 4;
-      })
-
-    var categoryElement = document.createElement("h2");
-    categoryElement.innerHTML = category.name;
-    var postContainer = document.createElement("div");
-    container.appendChild(categoryElement);
-
-    for (let post of topPosts) {
-
-        var miniPost = document.createElement("div");
-        miniPost.innerHTML = `
-            <img class="post-image" alt="post-image" src="${post.imgSource}"></img>
-            <div class="post-title-zone">
-                <h3><a href="/html/post_page.html?id=${post.id}">${post.title}</a></h3>
-                <div class="post-tile-zone-subinformation">
-                    <h4>${post.author}</h4>
-                    <h4>${post.date}</h4>
-                </div>
-            </div>
-            <div class="post-desc-zone">
-                ${post.summary}
-            </div>
-        `
-
-        miniPost.className = "post";
-
-        postContainer.appendChild(miniPost);
+const showTopPosts = async () => {
+    if (localStorage.getItem('username') !== null) {
+        loginContainer.style.visibility = 'hidden';
+        backgroundContainer.style.visibility = 'hidden';
     }
-    postContainer.className = "post-container";
-    container.appendChild(postContainer);
+
+    const categories = await getTopPostsByCategory();
+
+    for (let category of categories) {
+    
+        var categoryElement = document.createElement("h2");
+        categoryElement.innerHTML = category.name;
+        var postContainer = document.createElement("div");
+        container.appendChild(categoryElement);
+    
+        for (let post of category.posts) {
+            var miniPost = document.createElement("div");
+            miniPost.innerHTML = `
+                <img class="post-image" alt="post-image" src="${post.img_source}"></img>
+                <div class="post-title-zone">
+                    <h3><a href="/html/post_page.html?id=${post.id}">${post.title}</a></h3>
+                    <div class="post-tile-zone-subinformation">
+                        <h4>${post.author}</h4>
+                        <h4>${post.date}</h4>
+                    </div>
+                </div>
+                <div class="post-desc-zone">
+                    ${post.summary}
+                </div>
+            `
+    
+            miniPost.className = "post";
+    
+            postContainer.appendChild(miniPost);
+        }
+        postContainer.className = "post-container";
+        container.appendChild(postContainer);
+    }
 }
 
-let bodyTheme = document.getElementById('bodyTheme');
-
-const changeTheme = () => {
-    bodyTheme.className = "dark-blue";
-    console.log("wasa");
-}
+showTopPosts();

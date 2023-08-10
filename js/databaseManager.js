@@ -14,6 +14,11 @@ const getUserId = async (username) => {
     return user.id;
 }
 
+const getPostById = async (id) => {
+    const {data: { post }} = await apiRequest(`posts/?id=${id}`);
+    return post;
+}
+
 const getPostId = async (title) => {
     const post = await apiRequest(`posts/${title}`);
     return post.id;
@@ -51,12 +56,11 @@ const confirmRatingExists = async (ratingInfo) => {
 }
 
 const getTopPostsByCategory = async () => {
-    const categories = await apiRequest('categories')
-    var topPostsByCategory = [];
-    for (let category of categories) {
-        
-        var topPosts = await apiRequest(`posts/top-summary?id=${categories.index(category)}`)
-        topPostsByCategory.pusg({name: category.name, posts:topPosts})
+    const {data: { categories }} = await apiRequest('categories')
+    const topPostsByCategory = [];
+    for (let category of categories) {   
+        const topPosts = await apiRequest(`posts/top-summary?id=${category.id}`)
+        topPostsByCategory.push({name: category.name, posts:topPosts.data.posts})
     }
 
     return topPostsByCategory;

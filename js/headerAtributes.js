@@ -12,3 +12,10 @@ function headerSticker()
     header.classList.remove("sticky");
 }
 }
+
+let bodyTheme = document.getElementById('bodyTheme');
+
+const changeTheme = () => {
+    bodyTheme.className = "dark-blue";
+    console.log("wasa");
+}
