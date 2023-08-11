@@ -1,7 +1,5 @@
 const closeSession = document.getElementById("close-session-button");
 
-
-
 closeSession.addEventListener(`click`, (e) => {
 
     localStorage.removeItem('username');

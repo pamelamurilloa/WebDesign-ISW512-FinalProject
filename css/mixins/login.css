@@ -43,6 +43,9 @@
         margin: 3%;
         color: var(--color-sass--specific);
         background-color: var(--color-sass--background); }
+      #login-content form .user-authentification-container p, #login-content form .login-register-button-container p {
+        font-size: small;
+        color: var(--color-sass--specific); }
     #login-content form button {
       margin: 1%;
       height: 25px;

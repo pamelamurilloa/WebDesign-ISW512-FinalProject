@@ -1,5 +1,6 @@
 const optionsParent = document.getElementById("dropdown-search-options");
 const errorMessageHTML = document.getElementById("search-not-found__p");
+const container = document.getElementsByClassName("all-posts-section")[0];
 
 let keyphrase = '';
 

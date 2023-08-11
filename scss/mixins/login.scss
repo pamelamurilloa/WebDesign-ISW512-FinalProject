@@ -33,6 +33,11 @@
                 background-color: var(--color-sass--background);
             }
 
+            p {
+                font-size: small;
+                color: var(--color-sass--specific);
+            }
+
         }
 
         button {

@@ -69,22 +69,19 @@ object {
   z-index: 100;
   background-color: var(--color-sass--secondary);
   transition: width 2s, height 2s, transform 0.5s; }
+  .menu a {
+    padding-left: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-sass-general);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 10px; }
 
-.menu li {
-  padding-left: 40px; }
-
-.menu li a {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--color-sass-general);
-  text-align: center;
-  transition: 0.15s ease-in-out;
-  position: relative;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  padding: 10px; }
-
-.menu li a::after {
+.menu a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -93,11 +90,11 @@ object {
   height: 1px;
   background-color: var(--color-sass--primary); }
 
-.menu li a:hover:after {
+.menu a:hover:after {
   width: 100%;
   transition: width 0.6s; }
 
-ul a.active {
+.menu a.active {
   font-size: 1.75rem;
   text-shadow: 0 0 3px var(--color-sass--general); }
 
@@ -155,7 +152,7 @@ ul a.active {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end; }
-  .links li {
+  .links a {
     font-size: 1.5rem;
     margin: 0 25px 0 25px;
     background-color: rgba(var(--color-sass--primary), 1);

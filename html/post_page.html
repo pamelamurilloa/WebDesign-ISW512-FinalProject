@@ -15,11 +15,11 @@
 
         <title>Post</title>
     </head>
-    <body class="bodyTheme">
+    <body class="theme_body">
         <header id="header-container-index" class="sticky">
             <div class="options-header-container">
                 <button type="button" id="close-session-button">Log out</button>
-                <button class='theme-button' type="button" onclick="changeTheme()">Light Theme</button>
+                <button class="theme_button" type="button" onclick="changeTheme()">Light Theme</button>
             </div>
             <nav id="main-menu">
                 <ul class="links">
@@ -30,16 +30,16 @@
             </nav>
             
             <nav class="nav-container">
-                <ul class="nav-bar">
-                    <input type="checkbox" id="check" />
+                <div class="nav-bar">
+                    <input type="checkbox" id="check">
                     <span class="menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about_us.html">About Us</a></li>
-                        <li><a class="active" href="categories.html">Categories</a></li>
-                        <label for="check" class="close-menu">&#10005</label>
+                        <a href="index.html">Home</a>
+                        <a href="about_us.html">About Us</a>
+                        <a class="active" href="categories.html">Categories</a>
+                        <label for="check" class="close-menu">&#10005;</label>
                     </span>
-                    <label for="check" class="open-menu">&#9776</label>
-                </ul>
+                    <label for="check" class="open-menu">&#9776;</label>
+                </div>
             </nav>
         </header>
 

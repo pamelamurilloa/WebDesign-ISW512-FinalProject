@@ -1,11 +1,10 @@
-const container = document.getElementsByClassName("all-posts-section")[0];
+// const container = document.getElementsByClassName("all-posts-section")[0];
 
 //This for will go through the categories and their posts to show them in the categories zone
 
 
-const showAllPosts = async () => {
 
-    const categories = await getPostsByCategory();
+const showPosts = async (container, categories) => {
 
     for (let category of categories) {
         var categoryElement = document.createElement("h2");
@@ -40,5 +39,3 @@ const showAllPosts = async () => {
         container.appendChild(postContainer);
     }
 }
-
-showAllPosts();

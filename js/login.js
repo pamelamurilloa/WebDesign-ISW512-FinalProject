@@ -2,9 +2,18 @@ const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginButton = document.getElementById("login-button");
 const registerButton = document.getElementById("register-button");
+const confirmationMessage = document.getElementById("confirmation_message");
 
 const loginContainer = document.getElementById("login-content");
 const backgroundContainer = document.getElementById("full-screen-container");
+
+username.addEventListener(`click`, (e) => {
+    confirmationMessage.innerHTML = "";
+});
+
+password.addEventListener(`click`, (e) => {
+    confirmationMessage.innerHTML = "";
+});
 
 loginButton.addEventListener(`click`, async (e) => {
 
@@ -17,23 +26,24 @@ loginButton.addEventListener(`click`, async (e) => {
             loginContainer.style.visibility = 'hidden';
             backgroundContainer.style.visibility = 'hidden';
             password.value = "";
+            confirmationMessage.innerHTML = "";
             localStorage.setItem('username', username.value);
 
         } else {
-            window.alert("Invalid Login");
+            confirmationMessage.innerHTML = "Invalid Login";
         }
  
     } else {
-        window.alert("Username or password are empty");
+        confirmationMessage.innerHTML = "Username or password are empty";
     }
 })
 
 registerButton.addEventListener(`click`, async (e) => {
     if (password.value.length > 7 && username.value.length > 0) {
         insertUser({username:username.value, password:password.value});
-        window.alert("User registered correctly");
+        confirmationMessage.innerHTML = "User registered correctly";
     } else {
-        window.alert("The password must be at least 8 characters long");
+        confirmationMessage.innerHTML = "The password must be at least 8 characters long";
     }
     
 })

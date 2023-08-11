@@ -13,8 +13,8 @@ function headerSticker()
 }
 }
 
-const bodyTheme = document.getElementsByClassName('bodyTheme')[0];
-const themeButton = document.getElementsByClassName('theme-button')[0];
+const bodyTheme = document.getElementsByClassName("theme_body")[0];
+const themeButton = document.getElementsByClassName("theme_button")[0];
 
 const changeTheme = () => {
   if (bodyTheme.className === "dark-blue") {
